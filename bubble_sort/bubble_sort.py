@@ -1,13 +1,7 @@
-def bubble_sort(unsorted_list):
-    length = len(unsorted_list)
-    sorted_list = []
-    while len(sorted_list)!=length:
-        i = 0
-        while i < (len(unsorted_list) - 1):
-            if unsorted_list[i] < unsorted_list[i + 1]:
-                unsorted_list[i], unsorted_list[i + 1] = unsorted_list[i + 1], unsorted_list[i]
-            i = i + 1
-        sorted_list.append(unsorted_list[i])
-        unsorted_list.pop()
-
-    return sorted_list
+def bubble_sort(arr):
+    n=len(arr)
+    for i in range(n):
+        for j in range(0,n-i-1):
+            if arr[j] >arr[j+1]:
+                arr[j], arr[j+1]=arr[j+1], arr[j]
+    return arr
